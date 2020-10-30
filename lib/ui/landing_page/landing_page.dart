@@ -13,19 +13,31 @@ class LandingPage extends StatefulWidget {
 
 class _LandingPageState extends State<LandingPage> {
   int _selectedIndex = 0;
+  bool hideFAB = false;
 
   final _layoutPage = [
     HomePage(),
     LayananPage(),
     BookingPage(),
     ProfilePage(),
-    MooreButton()
+    //HomePage()
   ];
 
   void _onTabItem(int idx) {
-    setState(() {
-      _selectedIndex = idx;
-    });
+    if (idx != 4) {
+      setState(() {
+        _selectedIndex = idx;
+        hideFAB = false;
+      });
+    } else {
+      setState(() {
+        hideFAB = true;
+      });
+    }
+
+    // setState(() {
+    //   _selectedIndex = idx;
+    // });
   }
 
   @override
@@ -100,7 +112,7 @@ class _LandingPageState extends State<LandingPage> {
                       "assets/navigasi_bar/more.png",
                     ),
               title: Text(
-                "Profile",
+                "More",
                 style: TextStyle(
                     color: _selectedIndex == 4 ? Colors.blue : Colors.grey),
               )),
@@ -109,6 +121,41 @@ class _LandingPageState extends State<LandingPage> {
         //currentIndex: _selectedIndex,
         onTap: _onTabItem,
       ),
+      floatingActionButton: Visibility(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Padding(
+              padding: EdgeInsets.all(2),
+            ),
+            SizedBox(
+              width: 120,
+              child: RaisedButton(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    new Text(
+                      "Feedback",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    Container(
+                        child: Icon(
+                      Icons.favorite_border,
+                      color: Colors.white,
+                    )),
+                  ],
+                ),
+                color: Colors.blue,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
+                onPressed: () {},
+              ),
+            ),
+          ],
+        ),
+        visible: hideFAB,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
     );
   }
 }

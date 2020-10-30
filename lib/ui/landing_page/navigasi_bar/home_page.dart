@@ -104,8 +104,9 @@ class _HomePageState extends State<HomePage> {
       body: Container(
           child: ListView(
         children: [
+          // SEKILAS TENTANG RS. SMKDEV
           LimitedBox(
-            maxHeight: 275,
+            maxHeight: 255,
             //maxHeight: SizeConfig.blockVertical * 36,
             child: Stack(
               children: [
@@ -128,12 +129,23 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
+
+          // TEMUI KAMI
+          LimitedBox(
+            maxHeight: 580,
+            child: TemuiKami(),
+          ),
+          LimitedBox(
+            maxHeight: 580,
+            child: TentangKami(),
+          ),
         ],
       )),
     );
   }
 }
 
+// DESKRIPSI AWAL
 class DeskripsiAwal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -143,7 +155,7 @@ class DeskripsiAwal extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 60, 0, 0),
+            padding: const EdgeInsets.fromLTRB(20, 30, 0, 0),
             child: Text(
               "Sekilas Tentang",
               style: TextStyle(
@@ -190,7 +202,253 @@ class TemuiKami extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.white,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              child: Text(
+                "Temui Kami",
+                style: TextStyle(
+                  //height: 0,
+                  fontSize: 20,
+                  color: Colors.black,
+
+                  fontFamily: 'Poppins',
+                ),
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              print("map di tekan");
+            },
+            child: Center(
+              child: Image.asset("assets/img/maps.png"),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
+            child: Container(
+              child: Text(
+                "Rumah Sakit SMKDEV",
+                style: TextStyle(
+                  //height: 0,
+                  fontSize: 15,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+            child: Container(
+              child: Text(
+                "Jl. Margacinta No.29",
+                style: TextStyle(
+                  //height: 0,
+                  fontSize: 15,
+                  color: Colors.black,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+            child: Container(
+              child: Text(
+                "Senin - Jumat : 08.00 - 20.00",
+                style: TextStyle(
+                  //height: 0,
+                  fontSize: 15,
+                  color: Colors.black,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+            child: Container(
+              child: Text(
+                "Sabtu : 08.00 - 17.00",
+                style: TextStyle(
+                  //height: 0,
+                  fontSize: 15,
+                  color: Colors.black,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
+            child: Container(
+              child: Text(
+                "Klinik SMKDEV",
+                style: TextStyle(
+                  //height: 0,
+                  fontSize: 15,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+            child: Container(
+              child: Text(
+                "Jl. Mars Barat I No. 9",
+                style: TextStyle(
+                  //height: 0,
+                  fontSize: 15,
+                  color: Colors.black,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+            child: Container(
+              child: Text(
+                "Senin - Jumat : 08.00 - 20.00 ",
+                style: TextStyle(
+                  //height: 0,
+                  fontSize: 15,
+                  color: Colors.black,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+            child: Container(
+              child: Text(
+                "Sabtu : 08.00 - 13.00",
+                style: TextStyle(
+                  //height: 0,
+                  fontSize: 15,
+                  color: Colors.black,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
+            child: Container(
+              child: Text(
+                "BPJS",
+                style: TextStyle(
+                  //height: 0,
+                  fontSize: 15,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+            child: Container(
+              child: Text(
+                "Senin - Jumat : 07.00 - 14.00, 16.00 - 19.00",
+                style: TextStyle(
+                  //height: 0,
+                  fontSize: 15,
+                  color: Colors.black,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+            child: Container(
+              child: Text(
+                "Sabtu : 07.00 - 12.00 ",
+                style: TextStyle(
+                  //height: 0,
+                  fontSize: 15,
+                  color: Colors.black,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class TentangKami extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
       color: Colors.blue,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Container(
+                  child: Text(
+                    "Tentang Kami",
+                    style: TextStyle(
+                      //height: 0,
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Container(
+                  child: InkWell(
+                    onTap: () {
+                      print("selengkapnya di tekan");
+                    },
+                    child: Text(
+                      "Selengkapnya",
+                      style: TextStyle(
+                        //height: 0,
+                        fontSize: 12,
+                        color: Colors.white,
+
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Card(
+            child: Center(
+              child: Image.asset("assets/img/maps.png"),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
