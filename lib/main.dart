@@ -2,8 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'package:hospital_app/ui/landing_page/landing_page.dart';
 
+import 'package:flutter/services.dart';
+
 void main() {
-  runApp(MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]).then((_) {
+    runApp(MyApp());
+  });
 }
 
 class MyApp extends StatefulWidget {

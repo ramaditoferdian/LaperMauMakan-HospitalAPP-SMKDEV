@@ -49,11 +49,22 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    #Icon untuk Nav Bar
     - assets/navigasi_bar/home.png
     - assets/navigasi_bar/layanan.png
     - assets/navigasi_bar/booking.png
     - assets/navigasi_bar/profile.png
     - assets/navigasi_bar/more.png
+
+    #image tambahan
+    - assets/img/maps.png
+
+    #icon FAB
+    - assets/floating_action_button/feedback.png
+    - assets/floating_action_button/partner.png
+    - assets/floating_action_button/tentangkami.png
+
+
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -70,7 +70,9 @@ class _HomePageState extends State<HomePage> {
               margin: EdgeInsets.symmetric(horizontal: 4, vertical: 0),
               decoration: BoxDecoration(
                   borderRadius: BorderRadiusDirectional.circular(8),
-                  color: (index == _currentPage) ? Colors.blue : Colors.white),
+                  color: (index == _currentPage)
+                      ? Color(0xFF2962FF)
+                      : Colors.white),
             );
           }),
         ),
@@ -88,7 +90,7 @@ class _HomePageState extends State<HomePage> {
           style: TextStyle(
               fontSize: 14, fontFamily: 'Poppins', color: Colors.white),
         ),
-        color: Colors.blue,
+        color: Color(0xFF2962FF),
         onPressed: () {},
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
@@ -397,7 +399,7 @@ class TentangKami extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue,
+      color: Color(0xFF2962FF),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
