@@ -3,15 +3,15 @@
 Project membuat UI/UX dengan Flutter
 
 
-# Home Page
+## Home Page
 
 <img src="preview/ex1.png" width="300">
 
-# Map
+## Map
 
 <img src="assets/img/maps.png" >
 
-# Custom Floating Button (more)
+## Custom Floating Button (more)
 
 <img src="preview/ex2.png" width="300">
 
